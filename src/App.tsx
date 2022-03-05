@@ -5,6 +5,7 @@ import { Container } from './components/Container';
 import Greeting from './components/Greeting';
 import { Heading } from './components/Heading';
 import { Input } from './components/Input';
+import { LoggedIn } from './components/LoggedIn';
 import { Oscar } from './components/Oscar';
 import { Status } from './components/Status';
 
@@ -23,7 +24,7 @@ function App() {
     }} />
     <Input value='' handleChange={(event) => console.log(event, "Input")}/>   
      <Container styles={{padding: "1rem", margin: "2rem", backgroundColor: 'black', color: 'white'}}/>
-
+     <LoggedIn />
     </div>
   );
 }
