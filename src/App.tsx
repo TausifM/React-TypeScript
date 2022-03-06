@@ -9,6 +9,7 @@ import { LoggedIn } from './components/state/LoggedIn';
 import { Oscar } from './components/Oscar';
 import { Status } from './components/Status';
 import { User } from './components/state/User';
+import { Counter } from './components/useReducer/Counter';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
      <Container styles={{padding: "1rem", margin: "2rem", backgroundColor: 'black', color: 'white'}}/>
      <LoggedIn />
      <User />
+     <Counter />
     </div>
   );
 }
