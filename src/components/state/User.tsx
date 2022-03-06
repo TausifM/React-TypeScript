@@ -5,7 +5,7 @@ type AuthUser = {
 }
 export const User = () => {
     const [user, setUser] = useState<AuthUser | null>(null);
-
+// For useState Type Assertion instaed of <AuthUser | null>
 
     const handleLogin = () => {
         setUser({name: "Tausif", email: "xyz@gmail.com"})
