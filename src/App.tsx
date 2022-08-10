@@ -10,21 +10,27 @@ import { Oscar } from './components/Oscar';
 import { Status } from './components/Status';
 import { User } from './components/state/User';
 import { Counter } from './components/useReducer/Counter';
+import Profile from './components/Profile';
+import Todo from './components/Todo';
 
 function App() {
   return (
     <div className="App">
-    <Greeting name='Tausif' messageCount={10} isLoggedIn={false}/>
-    <Greeting name='Tausif' isLoggedIn={false}/>
+    <Todo />
+    <Greeting name='Tausif' messageCount={10} isLoggedIn={true}/>
+    {/* <Greeting name='Tausif' isLoggedIn={true}/> */}
     <Status status='error' />
     <Heading>Hi</Heading>
     <Oscar>
       <Heading>Hi Tausif </Heading>
     </Oscar>
+    <Profile name='Tausif' email='gmail.com' mobile={1234567890} status='active' styles={{padding: "1rem", margin: "2rem", backgroundColor: 'black', color: 'white'}} >
+      <Heading>Hi Tausif </Heading>
+    </Profile>
     <Button handleClick={(event,id) => {
       console.log("Click", event, id)
     }} />
-    <Input value='' handleChange={(event) => console.log(event, "Input")}/>   
+    <Input value='' handleChange={(event) => { console.log(event)}} />   
      <Container styles={{padding: "1rem", margin: "2rem", backgroundColor: 'black', color: 'white'}}/>
      <LoggedIn />
      <User />

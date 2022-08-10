@@ -9,7 +9,7 @@ export const Status = (props: StatusProps) => {
     }else if(props.status  ==='success'){
         message = 'Success'
     }else if (props.status === 'error'){
-        message = 'error'
+        message = 'Error'
     }
     return (
         <div>
