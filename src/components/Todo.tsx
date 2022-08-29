@@ -5,9 +5,9 @@ const Todo:React.FC = () => {
     const [todos, setTodos] = React.useState<string[]>([]);
     const inputRef = React.useRef<HTMLInputElement | null>(null);
 
-    // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setTodo(event.target.value);
-    // }
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTodo(event.target.value);
+    }
 
     const handleTodo = () => {
         // Uncontrolled component
@@ -26,7 +26,7 @@ const Todo:React.FC = () => {
         Todo
         <input type="test" value={todo} 
         ref={inputRef}
-        // onChange={(event)=>handleChange(event)}
+        onChange={(event)=>handleChange(event)}
         />
         <button  onClick={handleTodo}>Add</button>
         <ul>
